@@ -28,11 +28,11 @@ public class UnisPOOExercicio3 {
         labelIMC.setBounds(50, 160, 100, 20);
         labelCalc.setBounds(50, 190, 200, 60);
 
-        JtextFieldSomenteNumeros textWeinght = new JtextFieldSomenteNumeros();
-        JtextFieldSomenteNumeros textHeight = new JtextFieldSomenteNumeros();
+        JtextOnlyNumbers textWeinght = new JtextOnlyNumbers();
+        JtextOnlyNumbers textHeight = new JtextOnlyNumbers();
 
-        textWeinght.setMaximoCaracteres(3);
-        textHeight.setMaximoCaracteres(3);
+        textWeinght.setMaximumCharacter(3);
+        textHeight.setMaximumCharacter(3);
 
         textHeight.setBounds(150, 40, 100, 20);
         textWeinght.setBounds(150, 80, 100, 20);
