@@ -28,31 +28,31 @@ public class UnisPOOExercicio3 {
         labelIMC.setBounds(50, 160, 100, 20);
         labelCalc.setBounds(50, 190, 200, 60);
 
-        JtextFieldSomenteNumeros textAreaPeso = new JtextFieldSomenteNumeros();
-        JtextFieldSomenteNumeros textFormheight = new JtextFieldSomenteNumeros();
+        JtextFieldSomenteNumeros textWeinght = new JtextFieldSomenteNumeros();
+        JtextFieldSomenteNumeros textHeight = new JtextFieldSomenteNumeros();
 
-        textAreaPeso.setMaximoCaracteres(3);
-        textFormheight.setMaximoCaracteres(3);
+        textWeinght.setMaximoCaracteres(3);
+        textHeight.setMaximoCaracteres(3);
 
-        textFormheight.setBounds(150, 40, 100, 20);
-        textAreaPeso.setBounds(150, 80, 100, 20);
+        textHeight.setBounds(150, 40, 100, 20);
+        textWeinght.setBounds(150, 80, 100, 20);
 
-        JButton calcularButton = new JButton("Calcular");
-        calcularButton.setBounds(50, 120, 200, 20);
-        calcularButton.addActionListener((ActionEvent e) -> {
-            if (textAreaPeso.getText().isEmpty() || textFormheight.getText().isEmpty()) {
+        JButton calculateButton = new JButton("Calcular");
+        calculateButton.setBounds(50, 120, 200, 20);
+        calculateButton.addActionListener((ActionEvent e) -> {
+            if (textWeinght.getText().isEmpty() || textHeight.getText().isEmpty()) {
                 labelCalc.setText("Preencha todos os campos");
             } else {
-                labelCalc.setText(calculateIMC(textAreaPeso.getText(), textFormheight.getText()));
+                labelCalc.setText(calculateIMC(textWeinght.getText(), textHeight.getText()));
             }
             frame.setState(-1);
         });
 
         frame.add(labelWeight);
         frame.add(labelHeigha);
-        frame.add(textAreaPeso);
-        frame.add(textFormheight);
-        frame.add(calcularButton);
+        frame.add(textWeinght);
+        frame.add(textHeight);
+        frame.add(calculateButton);
         frame.add(labelIMC);
         frame.add(labelCalc);
         frame.add(panel);
